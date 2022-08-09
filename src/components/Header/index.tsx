@@ -1,31 +1,55 @@
 import Link from 'next/link';
 import { FaLinkedin, FaYoutube } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiBehanceFill, RiInstagramLine } from 'react-icons/ri';
+import { useTheme } from 'styled-components';
 
-import { Container, ListSVG, Nav } from './styles';
+import { ButtonMobile, Container, ListSVG, Nav } from './styles';
 
-export function Header() {
+interface IHeaderProps {
+  handleOpenMobileMenu(): void;
+}
+
+export function Header({ handleOpenMobileMenu }: IHeaderProps) {
+  const { colors } = useTheme();
+
   return (
     <Container>
       <ListSVG>
         <li>
-          <a href="/">
+          <a
+            href="https://www.instagram.com/paulok1ngs/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <RiInstagramLine size={23} />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a
+            href="https://www.linkedin.com/in/paulonascimentouiux/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin size={23} />
           </a>
         </li>
 
         <li>
-          <a href="/">
+          <a
+            href="https://www.behance.net/paulonascimentoUX/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <RiBehanceFill size={23} />
           </a>
         </li>
         <li>
-          <a href="/">
+          <a
+            href="https://www.youtube.com/c/K1NGS"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaYoutube size={23} />
           </a>
         </li>
@@ -33,7 +57,7 @@ export function Header() {
       <Nav>
         <ul>
           <li>
-            <Link href="">
+            <Link href="/assets/curriculo.pdf" download="PauloCurriculo">
               <a>Currículo</a>
             </Link>
           </li>
@@ -54,6 +78,9 @@ export function Header() {
           </li>
         </ul>
       </Nav>
+      <ButtonMobile onClick={handleOpenMobileMenu}>
+        <GiHamburgerMenu size={28} color={colors.gray[50]} />
+      </ButtonMobile>
     </Container>
   );
 }

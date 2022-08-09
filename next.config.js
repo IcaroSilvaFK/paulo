@@ -4,7 +4,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  swcMinify: false,
+  swcMinify: true,
 };
 
 module.exports = nextConfig;

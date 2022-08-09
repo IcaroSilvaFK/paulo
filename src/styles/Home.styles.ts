@@ -8,24 +8,40 @@ export const ContainerFirtsContent = styled.div`
   flex-direction: column;
 
   height: 100vh;
+`;
 
-  .content__presentation {
-    flex-grow: 1;
+export const SectionProjects = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 50px auto;
+
+  max-width: 1100px;
+
+  .sectionProjects__header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
 
-    text-align: center;
-
-    color: ${({ theme }) => theme.colors.gray[50]};
-
-    h1 {
-      font-weight: 400;
-      font-size: 3.6rem;
-
-      span {
-        color: ${({ theme }) => theme.colors.green[500]};
-      }
+    h2 {
+      color: ${({ theme }) => theme.colors.gray[900]};
     }
+  }
+`;
+
+export const SectionCards = styled.div`
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+
+  margin: 50px auto;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 `;

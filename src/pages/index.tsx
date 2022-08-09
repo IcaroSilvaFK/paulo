@@ -1,36 +1,26 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useMemo, useState } from 'react';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+import { useTheme } from 'styled-components';
 
+import { CardProject } from '../components/CardProject';
+import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
+import { MenuMobile } from '../components/Mobile/Menu';
+import { Presentation } from '../components/Presentation';
+import { useOpenMenuMobile } from '../hooks/useOpenMenuMobile';
 
-import { ContainerFirtsContent, Main } from '../styles/Home.styles';
-
-const labels = [
-  'UI - User Interface',
-  'UX Strategy',
-  'UX Writer',
-  'UI/UX Developer',
-  'Product Design',
-  'Usability Testing',
-  'UX Research',
-];
+import {
+  ContainerFirtsContent,
+  Main,
+  SectionCards,
+  SectionProjects,
+} from '../styles/Home.styles';
 
 const Home: NextPage = () => {
-  const [label, setLabel] = useState('');
-
-  // useEffect(() => {
-  //   setInterval(() => setLabels, 4000);
-  // }, []);
-
-  const setLabels = useMemo(() => {
-    for (let index = 0; index <= labels.length; index++) {
-      setLabel(labels[index]);
-      if (index === labels.length) {
-        index = 0;
-      }
-    }
-  }, [labels]);
+  const { colors } = useTheme();
+  const { handleCloseMenuMobile, handleOpenMenuMobile, isOpenMenuMobile } =
+    useOpenMenuMobile();
 
   return (
     <>
@@ -41,16 +31,63 @@ const Home: NextPage = () => {
       </Head>
       <Main>
         <ContainerFirtsContent>
-          <Header />
-          <div className="content__presentation">
-            <h1>
-              Olá, Me chamo <br />
-              Paulo Nascimento <br />
-              <span>{label}.</span>
-            </h1>
-          </div>
+          <Header handleOpenMobileMenu={handleOpenMenuMobile} />
+          <Presentation />
         </ContainerFirtsContent>
+        <SectionProjects>
+          <div className="sectionProjects__header">
+            <h2>Projetos</h2>
+            <MdKeyboardArrowDown color={colors.gray[900]} size={25} />
+          </div>
+          <SectionCards>
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+            <CardProject
+              image="/assets/holy.png"
+              heading="Holy - App de agenda para igrejas "
+            />
+          </SectionCards>
+        </SectionProjects>
+        <Footer />
       </Main>
+      <MenuMobile
+        isOpen={isOpenMenuMobile}
+        handleCloseMenuMobile={handleCloseMenuMobile}
+      />
     </>
   );
 };
