@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { useTheme } from 'styled-components';
 
@@ -21,7 +22,14 @@ const Home: NextPage = () => {
   const { colors } = useTheme();
   const { handleCloseMenuMobile, handleOpenMenuMobile, isOpenMenuMobile } =
     useOpenMenuMobile();
+  const router = useRouter();
 
+  function handlePushToHoly() {
+    router.push('/projects/holy');
+  }
+  function handlePushToNikCraft() {
+    router.push('/projetcts/holy');
+  }
   return (
     <>
       <Head>
@@ -43,10 +51,12 @@ const Home: NextPage = () => {
             <CardProject
               image="/assets/img_holy.png"
               heading="Holy - App de agenda para igrejas"
+              onClick={handlePushToHoly}
             />
             <CardProject
               image="/assets/notebook_bikcraft.png"
               heading="Bikcraft - ecommerce de bicicletas modernas e inovadoras"
+              onClick={handlePushToNikCraft}
             />
           </SectionCards>
         </SectionProjects>

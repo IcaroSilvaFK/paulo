@@ -3,9 +3,10 @@ import { Container } from './styles';
 interface ICardProps {
   heading: string;
   image: string;
+  onClick?: () => void;
 }
 
-export function CardProject({ heading, image }: ICardProps) {
+export function CardProject({ heading, image, onClick }: ICardProps) {
   return (
     <Container>
       <div className="image__container">
@@ -14,7 +15,7 @@ export function CardProject({ heading, image }: ICardProps) {
       <div className="heading__content">
         <span>{heading}</span>
       </div>
-      <button>Ver projeto</button>
+      <button onClick={onClick}>Ver projeto</button>
     </Container>
   );
 }

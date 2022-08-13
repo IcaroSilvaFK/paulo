@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { IoIosArrowDown } from 'react-icons/io';
+import { ContactFooter } from '../../components/ContactFooter';
 
 import { Header } from '../../components/Header';
 import { MenuMobile } from '../../components/Mobile/Menu';
@@ -190,6 +191,20 @@ const Project: NextPage = () => {
             </p>
           </div>
         </Section>
+        <Section>
+          <h3>Resultados e Aprendizados</h3>
+          <div className="project__employe">
+            <p>
+              Esse projeto foi um desafio e tanto pois foi tirado da ideia até o
+              resultado de MVP final feito unicamente por mim que era o único
+              contratado para fazer toda a parte de UI E UX, aprendi e
+              aperfeiçoei mais meus conhecimentos em geral mas principalmente em
+              UX Research pois tive que fazer muitos tipos de pesquisas para
+              chegar no resultado esperado para a empresa.
+            </p>
+          </div>
+        </Section>
+        <ContactFooter />
       </Main>
       <MenuMobile
         isOpen={isOpenMenuMobile}
