@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const Main = styled.main``;
+export const Main = styled.main`
+  width: 100%;
+
+  overflow: hidden;
+`;
 
 export const ContainerFirtsContent = styled.div`
   background: ${({ theme }) => theme.colors.gray[900]};
@@ -8,6 +12,10 @@ export const ContainerFirtsContent = styled.div`
   flex-direction: column;
 
   height: 100vh;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const SectionProjects = styled.section`

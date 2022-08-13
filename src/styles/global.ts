@@ -7,7 +7,7 @@ export const GLobalCSS = createGlobalStyle`
     box-sizing: border-box
   }
 
-  body,html,#root{
+  body,html,#__next{
     width: 100%;
     height: 100vh;
     font-size: 1rem;

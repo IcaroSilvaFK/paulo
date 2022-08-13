@@ -36,7 +36,7 @@ export function MenuMobile({
             </Link>
           </li>
           <li>
-            <Link href="#projetos">
+            <Link href="/">
               <a>Projetos</a>
             </Link>
           </li>
