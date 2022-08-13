@@ -41,44 +41,12 @@ const Home: NextPage = () => {
           </div>
           <SectionCards>
             <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
+              image="/assets/img_holy.png"
+              heading="Holy - App de agenda para igrejas"
             />
             <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
-            />
-            <CardProject
-              image="/assets/holy.png"
-              heading="Holy - App de agenda para igrejas "
+              image="/assets/notebook_bikcraft.png"
+              heading="Bikcraft - ecommerce de bicicletas modernas e inovadoras"
             />
           </SectionCards>
         </SectionProjects>

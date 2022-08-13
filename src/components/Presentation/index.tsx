@@ -22,8 +22,8 @@ export function Presentation() {
           <ReactTypingEffect
             text={labels}
             typingDelay={100}
-            speed={200}
-            eraseDelay={150}
+            speed={80}
+            eraseDelay={100}
           />
         </span>
       </h1>

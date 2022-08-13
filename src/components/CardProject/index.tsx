@@ -8,7 +8,7 @@ interface ICardProps {
 export function CardProject({ heading, image }: ICardProps) {
   return (
     <Container>
-      <div>
+      <div className="image__container">
         <img src={image} alt={heading} />
       </div>
       <div className="heading__content">

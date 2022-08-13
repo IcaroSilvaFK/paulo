@@ -6,7 +6,13 @@ import { Header } from '../../components/Header';
 import { MenuMobile } from '../../components/Mobile/Menu';
 import { useOpenMenuMobile } from '../../hooks/useOpenMenuMobile';
 
-import { Container, Main, Section } from '../../styles/Project.styles';
+import {
+  Container,
+  Main,
+  Row,
+  Section,
+  Separator,
+} from '../../styles/Project.styles';
 
 const Project: NextPage = () => {
   const { handleCloseMenuMobile, handleOpenMenuMobile, isOpenMenuMobile } =
@@ -40,7 +46,7 @@ const Project: NextPage = () => {
         </Section>
         <Section className="gray__section">
           <h3>Problema</h3>
-          <div>
+          <div className="problem">
             <p>
               Hoje em quase todas as igrejas as festas e eventos são marcados e
               divulgados por mini jornais da própria igreja, calendários, etc.,
@@ -93,6 +99,7 @@ const Project: NextPage = () => {
         </Section>
         <Section className="gray__section">
           <h3>Mapeamento de afinidade</h3>
+          <Separator />
           <div className="diagram">
             <p>
               Com os insights obtidos através da pesquisa foi feito um
@@ -110,6 +117,77 @@ const Project: NextPage = () => {
           <div className="flex__images">
             <img src="/assets/persona1.png" alt="persona1" />
             <img src="/assets/persona2.png" alt="persona2" />
+          </div>
+        </Section>
+        <Section className="gray__section">
+          <h3>Análise de competidores</h3>
+          <Separator />
+          <div className="flex__images">
+            <img src="/assets/competidor1.png" alt="persona1" />
+            <img src="/assets/competidor2.png" alt="persona2" />
+          </div>
+        </Section>
+        <Section>
+          <Separator />
+          <img
+            src="/assets/jornadausuario.png"
+            alt="jornada usuario"
+            style={{ maxWidth: 900 }}
+          />
+        </Section>
+        <Section className="gray__section">
+          <h3>Wireframe</h3>
+          <Separator />
+          <img
+            src="/assets/wireframe.png"
+            alt="Wireframe"
+            style={{ maxWidth: 900 }}
+          />
+        </Section>
+        <Section>
+          <h3>MVP</h3>
+          <Separator />
+          <Row>
+            <div>
+              <img
+                src="/assets/holyapphome.png"
+                alt="Wireframe"
+                style={{ maxWidth: 900 }}
+              />
+            </div>
+            <div>
+              <img
+                src="/assets/holyappagenda.png"
+                alt="Wireframe"
+                style={{ maxWidth: 900 }}
+              />
+            </div>
+            <div>
+              <img
+                src="/assets/holyappeventos.png"
+                alt="Wireframe"
+                style={{ maxWidth: 900 }}
+              />
+            </div>
+          </Row>
+          <Separator />
+          <div>
+            <img src="/assets/holyweb.png" alt="holy web" />
+          </div>
+        </Section>
+        <Section className="gray__section">
+          <h3>Próximos passos</h3>
+          <Separator />
+          <div className="problem">
+            <p>
+              O Holy tem em vista um crescimento muito bom no nicho que está
+              sendo trabalhando pela escassez de serviços, tendo isso em mente
+              os próximos passos seriam tentar acostumar os usuários com essa
+              interface simples e prática mas por outro lado funcional e com o
+              passar das atualizações ja ir implementando novas funcionalidades
+              e outros serviços do nicho que podem ser implementados dentro do
+              próprio holy.
+            </p>
           </div>
         </Section>
       </Main>

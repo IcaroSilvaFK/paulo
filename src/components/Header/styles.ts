@@ -52,7 +52,7 @@ export const Nav = styled.nav`
       transition: all linear 0.3s;
 
       :hover {
-        color: ${({ theme }) => theme.colors.gray[100]};
+        color: ${({ theme }) => theme.colors.green[500]};
       }
     }
   }

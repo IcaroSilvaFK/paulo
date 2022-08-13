@@ -43,6 +43,9 @@ export const Section = styled.section`
   p {
     font-weight: 300;
   }
+  h3 {
+    font-size: 1.8rem;
+  }
 
   .project {
     margin-top: -140px;
@@ -64,10 +67,6 @@ export const Section = styled.section`
 
     color: ${({ theme }) => theme.colors.gray[900]};
 
-    h3 {
-      font-size: 1.4rem;
-    }
-
     p {
       text-align: left;
 
@@ -86,7 +85,7 @@ export const Section = styled.section`
 
     font-family: ${({ theme }) => theme.fonts.roboto};
 
-    div {
+    .problem {
       text-align: left;
       max-width: 790px;
       color: ${({ theme }) => theme.colors.gray[900]};
@@ -108,10 +107,13 @@ export const Section = styled.section`
   }
 
   .flex__images {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+
     display: flex;
     align-items: center;
-    gap: 40px;
-    margin-top: 60px;
+    justify-content: space-between;
 
     img {
       max-width: 600px;
@@ -119,4 +121,13 @@ export const Section = styled.section`
       object-fit: cover;
     }
   }
+`;
+
+export const Separator = styled.div`
+  margin-top: 50px;
+`;
+
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
 `;

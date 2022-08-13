@@ -8,12 +8,19 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-family: ${({ theme }) => theme.fonts.roboto};
+
+  .image__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   div {
     img {
-      width: 180px;
+      height: 200px;
+      max-width: 350px;
+      object-fit: cover;
     }
 
     span {
@@ -22,7 +29,8 @@ export const Container = styled.div`
     }
   }
   .heading__content {
-    max-width: 240px;
+    max-width: 260px;
+    flex: 1;
   }
   button {
     background: ${({ theme }) => theme.colors.gray[900]};
