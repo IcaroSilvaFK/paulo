@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiBehanceFill, RiInstagramLine } from 'react-icons/ri';
@@ -12,6 +13,7 @@ interface IHeaderProps {
 
 export function Header({ handleOpenMobileMenu }: IHeaderProps) {
   const { colors } = useTheme();
+  const { pathname } = useRouter();
 
   return (
     <Container>
@@ -62,17 +64,17 @@ export function Header({ handleOpenMobileMenu }: IHeaderProps) {
             </Link>
           </li>
           <li>
-            <Link href="">
+            <Link href="/">
               <a>Projetos</a>
             </Link>
           </li>
-          <li>
-            <Link href="">
+          <li className={pathname === '/sobre' ? 'active' : ''}>
+            <Link href="/sobre">
               <a>Sobre</a>
             </Link>
           </li>
-          <li>
-            <Link href="">
+          <li className={pathname === '/contact' ? 'active' : ''}>
+            <Link href="/sobre">
               <a>Contato</a>
             </Link>
           </li>

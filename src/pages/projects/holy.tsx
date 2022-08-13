@@ -22,7 +22,7 @@ const Project: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Project </title>
+        <title>Holy</title>
       </Head>
       <Main>
         <Container>
@@ -79,6 +79,7 @@ const Project: NextPage = () => {
         </Section>
         <Section className="gray__section">
           <h3>Diamante Duplo</h3>
+          <Separator />
           <div>
             <img src="/assets/diamanteux.png" alt="diamante ux" />
           </div>
@@ -86,6 +87,7 @@ const Project: NextPage = () => {
         <Section>
           <div className="project__employe">
             <h3>Pesquisa</h3>
+            <Separator />
             <p>
               As pesquisas foram feitas cuidadosamente com perguntas objetivas
               mas que respondiam muito sobre o mercado, foram feitas por
@@ -115,6 +117,7 @@ const Project: NextPage = () => {
         </Section>
         <Section>
           <h3>Personas</h3>
+          <Separator />
           <div className="flex__images">
             <img src="/assets/persona1.png" alt="persona1" />
             <img src="/assets/persona2.png" alt="persona2" />
@@ -134,6 +137,7 @@ const Project: NextPage = () => {
             src="/assets/jornadausuario.png"
             alt="jornada usuario"
             style={{ maxWidth: 900 }}
+            className="jornada"
           />
         </Section>
         <Section className="gray__section">
@@ -172,7 +176,7 @@ const Project: NextPage = () => {
             </div>
           </Row>
           <Separator />
-          <div>
+          <div className="holy__web">
             <img src="/assets/holyweb.png" alt="holy web" />
           </div>
         </Section>

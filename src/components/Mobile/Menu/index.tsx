@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { RiBehanceFill, RiInstagramLine } from 'react-icons/ri';
@@ -29,10 +30,26 @@ export function MenuMobile({
       </ContainerButtonClose>
       <nav>
         <ul>
-          <li>Projetos</li>
-          <li>Sobre</li>
-          <li>Contato</li>
-          <li>Currículo</li>
+          <li>
+            <Link href="/assets/curriculo.pdf" download="PauloCurriculo">
+              <a>Currículo</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="#projetos">
+              <a>Projetos</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/sobre">
+              <a>Sobre</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/sobre">
+              <a>Contato</a>
+            </Link>
+          </li>
         </ul>
       </nav>
       <ListSVG>

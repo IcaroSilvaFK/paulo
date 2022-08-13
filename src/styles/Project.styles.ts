@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Main = styled.main`
   width: 100%;
   height: 100%;
+
+  overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -24,6 +26,7 @@ export const Container = styled.div`
     gap: 15px;
     span {
       color: ${({ theme }) => theme.colors.gray[100]};
+      text-align: center;
     }
   }
 `;
@@ -121,6 +124,48 @@ export const Section = styled.section`
       object-fit: cover;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+
+    text-align: center;
+    .project {
+      margin-top: -60px;
+
+      max-width: 250px;
+    }
+
+    p {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .graphic {
+      width: 350px;
+    }
+    &.gray__section {
+      img {
+        width: 280px;
+      }
+    }
+    .flex__images {
+      flex-direction: column;
+      gap: 40px;
+
+      img {
+        width: 300px;
+      }
+    }
+    .jornada {
+      width: 100%;
+    }
+
+    .holy__web {
+      img {
+        width: 350px;
+      }
+    }
+  }
 `;
 
 export const Separator = styled.div`
@@ -130,4 +175,23 @@ export const Separator = styled.div`
 export const Row = styled.div`
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100vh;
+    margin-top: -100px;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      margin-top: -100px;
+      img {
+        width: 130px;
+      }
+    }
+
+    div:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
 `;

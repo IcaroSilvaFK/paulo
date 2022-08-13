@@ -57,6 +57,16 @@ export const Nav = styled.nav`
     }
   }
 
+  .active {
+    &::after {
+      width: 100%;
+      height: 1px;
+      display: block;
+      content: '';
+      background: ${({ theme }) => theme.colors.green[500]};
+    }
+  }
+
   @media screen and (max-width: 500px) {
     display: none;
   }
