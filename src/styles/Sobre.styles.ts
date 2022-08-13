@@ -204,6 +204,12 @@ export const Ul = styled.ul`
       color: ${({ theme }) => theme.colors.gray[50]};
     }
   }
+
+  @media screen and (max-width: 500px) {
+    &.ferramentas {
+      padding: 50px;
+    }
+  }
 `;
 
 export const ListHeading = styled.p`

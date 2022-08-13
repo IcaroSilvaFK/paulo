@@ -303,27 +303,25 @@ export default function Sobre() {
             </Ul>
           </Grid>
           <Separator />
-          <Grid>
-            <h2>Ferramentas</h2>
-            <Ul className="ferramentas">
-              <ListItem>
-                <MarkerGreen />
-                Figma
-              </ListItem>
-              <ListItem>
-                <MarkerGreen />
-                Adobe XD
-              </ListItem>
-              <ListItem>
-                <MarkerGreen />
-                JAVASCRIPT
-              </ListItem>
-              <ListItem>
-                <MarkerGreen />
-                Trello
-              </ListItem>
-            </Ul>
-          </Grid>
+          <h2>Ferramentas</h2>
+          <Ul className="ferramentas">
+            <ListItem>
+              <MarkerGreen />
+              Figma
+            </ListItem>
+            <ListItem>
+              <MarkerGreen />
+              Adobe XD
+            </ListItem>
+            <ListItem>
+              <MarkerGreen />
+              JAVASCRIPT
+            </ListItem>
+            <ListItem>
+              <MarkerGreen />
+              Trello
+            </ListItem>
+          </Ul>
         </HabilitsSection>
         <SectionButton>
           <button onClick={() => router.push('/')}>
